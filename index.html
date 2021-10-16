@@ -18,9 +18,14 @@
     </header>
 
     <div class="container">
-        <div class="question-container">
+        <div id="start-container" class="visble">
+            <h2>Coding Quiz Challenge</h2>
+            <p>Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start-button" class="btn start-btn">Start Quiz</button>
+        </div>
+        <div id="question-container" class="hide">
             <div id="question" class="hidden">
-                <h3>Question:</h3>
+                <h2>Question:</h2>
             </div>
             <div id="answer-buttons">
                 <button class="btn">Answer 1</button>
@@ -28,8 +33,8 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
-            <div class="result">
-                <p>result</p>
+            <div class="result-container">
+                <p id="result">Result!</p>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 header {
@@ -25,9 +26,17 @@ a {
     flex-direction: column;
     margin: 200px 100px;
     padding: 20px;
+    font-size: 1.5rem;
 }
 
-.question-container {
+#start-container {
+    margin: 10px;
+    width: 100vw;
+    max-width: 80%;
+    text-align: center;
+}
+
+#question-container {
     margin: 10px;
     width: 100vw;
     max-width: 50%;
@@ -42,13 +51,18 @@ a {
     background-color: rgb(58, 43, 226);
     color: white;
     text-align: start;
-    padding: 5px 10px;
+    font-size: 20px;
+    padding: 10px 20px;
     border-radius: 5px;
 }
-.result {
+.result-container {
     border-top:solid 1px black ;
     margin: 20px 0;
     padding: 0 10px;
     font-style: italic;
     opacity: .5;
+}
+
+.hide {
+    display: none;
 }
