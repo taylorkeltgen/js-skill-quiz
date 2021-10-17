@@ -16,9 +16,10 @@
 
 ## Website:
 
-- https://taylorkeltgen.github.io/[enter]/
+- https://taylorkeltgen.github.io/js-skill-quiz/
 
-## Screenshot:
+## Screenshot:![Screen Shot 2021-10-17 at 3 35 01 PM](https://user-images.githubusercontent.com/88693758/137643982-19c00dbe-7f1f-4756-9c39-673f7fa491f7.png)
+
 
 ## Contribution:
 
