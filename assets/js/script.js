@@ -6,7 +6,9 @@ var answerButtonsEl = document.querySelector('#answer-buttons');
 var resultEl = document.querySelector('#result-container');
 var endContainerEl = document.querySelector('#end-container');
 var finalScoreEl = document.querySelector('#final-score');
-
+var submitInitialsEl = document.querySelector('#submit-initials');
+var formEl = document.querySelector('#submit-form');
+var timerEl = document.querySelector('#timer');
 
 
 let randomQuestion, currentQustionIndex;
@@ -65,10 +67,7 @@ var showQuestion = function(question){
         var button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
-        // if(answer.correct) {
-        //     button.dataset.correct = answer.correct
-        // }
-        // button.addEventListener('click', selectAnswer)
+
         answerButtonsEl.appendChild(button)
     });
 };
@@ -80,29 +79,7 @@ var resetState = function(){
     }
 };
 
-// var selectAnswer = function(e) {
-//     var selectButton = e.target;
-//     var correct = selectButton.dataset.correct;
-//     setStatusClass(document.body, correct)
-//     Array.from(answerButtonsEl.children).forEach(button => {
-//         setStatusClass(button, button.dataset.correct)
-//     });
-    
-// };
 
-// var setStatusClass = function(element, correct) {
-//     clearStatusClass(element);
-//     if(correct){
-//         element.classList.add('correct');
-//     } else {
-//         element.classList.add('wrong');
-//     };
-// };
-
-// var clearStatusClass = function(element) {
-//     element.classList.remove('correct');
-//     element.classList.remove('wrong');
-// }
 
 var endGame = function(){
     questionContainerEl.classList.add('hidden');
@@ -111,8 +88,32 @@ var endGame = function(){
     finalScoreEl.innerText = 'Your final score is: ' + finalScore;
 }
 
+var insertInitials = function(event){
+    // event.preventDefault();
+
+}
+
+
+var countdown = function() {
+    var timeLeft = 60;
+    
+    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function () {
+      // As long as the `timeLeft` is greater than 1
+      if (timeLeft >= 0) {
+        // Set the `textContent` of `timerEl` to show the remaining seconds
+        timerEl.innerHTML = 'Time: ' + timeLeft;
+        timeLeft--;
+      } else {
+        clearInterval(timeInterval);
+        endGame();
+      }
+    }, 1000);
+  }
+
 // Start Game by Clicking Start Buttion
 startButtonEl.addEventListener('click', startGame);
+startButtonEl.addEventListener('click', countdown);
 // Trigger Next Question
 answerButtonsEl.addEventListener('click', () => {
     currentQustionIndex++;

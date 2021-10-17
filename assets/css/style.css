@@ -15,7 +15,7 @@ a {
     text-decoration: none;
     color: violet;
 }
-.timeLeft {
+.timer {
     align-items: flex-end;
 }
 
