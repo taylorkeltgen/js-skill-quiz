@@ -23,18 +23,22 @@
             <p>Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
             <button id="start-button" class="btn start-btn">Start Quiz</button>
         </div>
-        <div id="question-container" class="hide">
-            <div id="question" class="hidden">
-                <h2>Question:</h2>
-            </div>
+        <div id="question-container" class="hidden">
+            <div id="question">Question:</div>
             <div id="answer-buttons">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                
             </div>
-            <div class="result-container">
+            <div id="result-container" class="hidden">
                 <p id="result">Result!</p>
+            </div>
+        </div>
+        <div id="end-container" class="hidden">
+            <h2>All done!</h2>
+            <p id="final-score">Final Score</p>
+            <div id="enter-score">
+                <p>Enter Initials:</p>
+                <form action="input">text</form>
+                <button type="submit" class="submit-btn">Submit</button>
             </div>
         </div>
     </div>
